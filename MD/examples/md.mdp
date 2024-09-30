@@ -1,0 +1,47 @@
+;title                   = Gas phase simulation
+integrator              = md
+nsteps                  = 1000000
+dt                      = 0.002
+
+; Output control
+nstxout                 = 1000
+nstvout                 = 1000
+nstenergy               = 1000
+nstlog                  = 1000
+
+; Bond parameters
+continuation            = no        ; 不继续之前的运行
+constraint_algorithm    = lincs
+constraints             = h-bonds
+lincs_iter              = 1
+lincs_order             = 4
+
+; Neighborsearching
+cutoff-scheme           = Group     ; 使用Verlet邻居搜索
+nstlist                 = 10
+rlist                   = 1.0       ; 手动设置rlist
+verlet-buffer-tolerance = -1        ; 禁用verlet-buffer-tolerance
+
+; Electrostatics
+coulombtype             = Cut-off   ; 使用Cut-off
+rcoulomb                = 1.0
+
+; Temperature coupling
+tcoupl                  = V-rescale
+tc-grps                 = System
+tau_t                   = 0.1
+ref_t                   = 300
+
+; Pressure coupling
+pcoupl                  = no
+
+; Periodic boundary conditions
+pbc                     = no        ; 无周期性边界条件
+
+; Dispersion correction
+DispCorr                = no        ; 禁用色散校正
+
+; Velocity generation
+gen_vel                 = yes       ; 生成初始速度
+gen_temp                = 300
+
