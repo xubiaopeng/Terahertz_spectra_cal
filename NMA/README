@@ -1,1 +1,3 @@
+prerequist software: double precision gromacs
+test run: scripts/NMA-THZ-abs.sh
 
