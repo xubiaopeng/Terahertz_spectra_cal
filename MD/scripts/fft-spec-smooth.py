@@ -1,3 +1,4 @@
+# To calculate the Terahertz absorption spectrum utlizing the autocorrelation function obtained from MD simulations
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.signal import savgol_filter
