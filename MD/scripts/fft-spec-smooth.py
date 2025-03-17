@@ -1,7 +1,9 @@
 # To calculate the Terahertz absorption spectrum utlizing the autocorrelation function obtained from MD simulations
+#change the name of input_file to your own filename
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.signal import savgol_filter
+input_file = "4yfq-acf100-final.xvg"
 
 def read_data(filename):
     t = []
@@ -20,7 +22,7 @@ def read_data(filename):
                         continue
     return np.array(t), np.array(C_mu)
 
-t, C_mu = read_data('4yfq-acf100-final.xvg')
+t, C_mu = read_data(input_file) 
 
 N = len(C_mu)
 dt = t[1] - t[0]  
