@@ -1,3 +1,4 @@
-prerequist software: double precision gromacs
-test run: go to example; run the commands in the script located at "script/NMA-THZ-abs.sh"
-
+prerequist software: double precision gromacs. Note that the version of gromacs should be older than GROMACS 2020 so that the group cutoff scheme can be used.
+Usage:
+1. go to script; 
+2. run the commands in NMA-THZ-abs.sh
