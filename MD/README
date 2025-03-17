@@ -1,1 +1,2 @@
-
+For MD simulation, run the script MD-thz-spectra.sh 
+For obtain the terahertz absorption spectra from the autocorrelation function of the dipole momentum, run the script fft-spec-smooth.py
